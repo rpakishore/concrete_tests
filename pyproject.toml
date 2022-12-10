@@ -1,0 +1,33 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "concrete_tests"
+authors = [{name = "Arun Kishore", email = "rpakishore@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+
+dependencies = [
+    "pdfplumber==0.6.2",
+    "pandas==1.4.2",
+    "openpyxl==3.0.9",
+    "tqdm==4.64.0",
+    "fpdf==1.7.2",
+    "matplotlib==3.6.2"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+dev = [
+    "ipykernel"
+]
+
+[project.urls]
+Home = "https://github.com/rpakishore/concrete_tests"
